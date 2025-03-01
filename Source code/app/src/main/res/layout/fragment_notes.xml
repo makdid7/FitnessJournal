@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingTop="@dimen/notes_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark_gray"
+    tools:context=".ui.notes.NotesFragment"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:fontFamily="@font/montserrat"
+            android:paddingStart="@dimen/notes_padding"
+            android:paddingEnd="@dimen/notes_padding"
+            android:paddingTop="@dimen/notes_padding"
+            android:textColor="@color/light_white"
+            android:textColorHint="@color/light_white"
+            android:background="@color/dark_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:hint="@string/notes_hint"
+            android:id="@+id/etNotes"
+            android:importantForAutofill="no"
+            android:minLines="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/np_notes_text_size" />
+
+        <NumberPicker
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/np_notes_text_size"
+            android:theme="@style/Theme.AppCompat.myPicker"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/notesTextSizeHint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/light_white"
+            android:labelFor="@+id/np_notes_text_size"
+            android:text="@string/notes_text_size_hint"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notesTextSizeHint"
+            android:layout_marginStart="@dimen/notes_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/np_notes_text_size" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

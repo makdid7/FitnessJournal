@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="dark_blue">#355c7d</color> final
+    <color name="translucent_dark_blue">#80355C7D</color>
+<!--    <color name="dark_blue">#23395d</color>-->
+    <color name="light_pink">#C86381</color> final
+<!--    <color name="light_pink">#c56c86</color>-->
+<!--    <color name="light_pink">#E6E37383</color>-->
+    <color name="coral">#f88379</color>
+    <color name="watermelon">#E37383</color>
+    <color name="button_text_fg">#ffffff</color>
+    <color name="dark_gray">#323939</color>
+    <color name="light_white">#C5C1BD</color>
+    <color name="green">#3D8E40</color>
+    <color name="light_gray">#636363</color>
+    <color name="dark_coral">#D6463B</color>
+    <!--    #725a7a-->
+<!--    <color name="light_pink">#C86381</color> final  -->
+</resources>

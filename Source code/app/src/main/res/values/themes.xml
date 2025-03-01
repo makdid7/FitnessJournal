@@ -1,0 +1,72 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.FitnessJournal" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ic_launcher_background</item>
+        <item name="colorPrimaryVariant">@color/light_pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dark_blue</item>
+        <item name="colorSecondaryVariant">@color/dark_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.FitnessJournal.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FitnessJournal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FitnessJournal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--    configure color of numbers in font size picker in Notes tab-->
+    <style name="Theme.AppCompat.myPicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/light_white</item>
+    </style>
+
+    <!--   TODO: configure text size of tab titles in navigation menu-->
+    <style name="Theme.AppCompat.myDrawer">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <!--    configure dialogs https://stackoverflow.com/a/58068957/19469399 -->
+    <style name="Theme.MaterialComponents.Light.Dialog.Alert">
+<!--        TODO: find how to change message text color-->
+        <item name="android:textColor">@color/light_white</item>
+        <item name="colorSurface">@android:color/transparent</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:background">@drawable/round_corners</item>
+        <!-- Style for negative button -->
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <!-- Style for neutral button -->
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+        <!-- Style for positive button -->
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <!-- text color for 'delete' button -->
+        <item name="android:textColor">@color/light_white</item>
+        <!-- background tint for 'delete' the button -->
+        <item name="backgroundTint">@color/dark_blue</item>
+    </style>
+
+    <style name="NeutralButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <!-- text color for 'got it' button -->
+        <item name="android:textColor">@color/dark_coral</item>
+        <!-- background tint for 'got it' button -->
+        <item name="backgroundTint">@color/dark_blue</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <!-- text color for 'got it' button -->
+        <item name="android:textColor">@color/dark_coral</item>
+        <!-- background tint for 'got it' button -->
+        <item name="backgroundTint">@color/dark_blue</item>
+    </style>
+
+</resources>

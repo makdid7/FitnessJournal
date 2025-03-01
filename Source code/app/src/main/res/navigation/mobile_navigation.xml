@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/nav_journal">
+
+    <fragment
+            android:id="@+id/nav_journal"
+            android:name="maksim.fitnessjournal.ui.journal.JournalFragment"
+            android:label="@string/menu_journal"
+            tools:layout="@layout/fragment_journal"/>
+
+    <fragment
+            android:id="@+id/nav_tips"
+            android:name="maksim.fitnessjournal.ui.tips.TipsFragment"
+            android:label="@string/menu_tips"
+            tools:layout="@layout/fragment_tips"/>
+
+    <fragment
+            android:id="@+id/nav_notes"
+            android:name="maksim.fitnessjournal.ui.notes.NotesFragment"
+            android:label="@string/menu_notes"
+            tools:layout="@layout/fragment_notes"/>
+</navigation>

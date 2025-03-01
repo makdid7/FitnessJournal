@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?><!--        android:scrollbars="none"-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark_blue"
+    android:paddingBottom="@dimen/grid_padding"
+    tools:context=".ui.journal.JournalFragment"
+    android:id="@+id/journalMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/journalRows">
+
+        <LinearLayout
+            android:paddingEnd="@dimen/grid_padding"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:id="@+id/clRow0"
+            android:baselineAligned="false"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.49"
+                android:id="@+id/clRow0Col0"
+                app:layout_constraintEnd_toStartOf="@+id/clRow0Col1"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:contentDescription="@string/skip_rope_desc"
+                    android:src="@drawable/ic_skipping"
+                    android:id="@+id/imgBtnSkiprope"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.526" />
+
+                <TextView
+                    android:id="@+id/tvSkiprope"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/skip_rope"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/clRow0Col1"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="590dp"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_hitups"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnHitups"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/hit_ups_desc" />
+
+                <TextView
+                    android:id="@+id/tvHitups"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/hit_ups"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBtnHitups"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnHitups"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/clRow0Col2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clRow0Col1"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_kickups"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnKickups"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/kick_ups_desc" />
+
+                <TextView
+                    android:id="@+id/tvKickups"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/kick_ups"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBtnKickups"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnKickups"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/clRow1"
+            android:paddingEnd="@dimen/grid_padding"
+            android:baselineAligned="false"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.49"
+                android:id="@+id/clRow1Col0"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                app:layout_constraintEnd_toStartOf="@+id/clRow0Col1"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_running_400m"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtn400m"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/_400m_desc"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv400m"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/_400m"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgBtn400m"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="@+id/imgBtn400m"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/clRow1Col1"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="590dp"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_running_400m"
+                    android:contentDescription="@string/_400m_desc"
+                    android:id="@+id/imgBtn800m"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv800m"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/_800m"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgBtn800m"
+                    app:layout_constraintStart_toStartOf="@+id/imgBtn800m"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtn800m"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingEnd="@dimen/grid_padding"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/clRow2"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                android:id="@+id/clRow2Col0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clRow0Col1"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_longjump"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnLongjump"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/long_jump_desc"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvLongjump"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/long_jump"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imgBtnLongjump"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnLongjump"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                android:id="@+id/clRow2Col1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clRow0Col1"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_javelin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnJavelin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/javelin_throw_desc"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvJavelin"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/javelin_throw"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imgBtnJavelin"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnJavelin"
+                    app:layout_constraintVertical_bias="0.938"
+                    android:fontFamily="@font/montserrat_medium" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                android:id="@+id/clRow2Col2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clRow0Col1"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_shotput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnShotput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/shot_put_desc"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvShotput"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/shot_put"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imgBtnShotput"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnShotput"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:paddingEnd="@dimen/grid_padding"
+            android:id="@+id/clRow3"
+            tools:ignore="RtlSymmetry"
+            android:baselineAligned="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                android:id="@+id/clRow3Col0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clRow3Col0"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_highjump"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnHighjump"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/high_jump_desc" />
+
+                <TextView
+                    android:id="@+id/tvHighjump"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:labelFor="@+id/imgBtnHighjump"
+                    android:text="@string/high_jump"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBtnHighjump"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnHighjump"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/grid_padding"
+                android:paddingStart="@dimen/grid_padding"
+                android:id="@+id/clRow3Col1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clRow3Col0"
+                android:layout_weight="1"
+                tools:ignore="RtlSymmetry">
+
+                <ImageButton
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/ripple"
+                    android:backgroundTint="@color/light_pink"
+                    android:src="@drawable/ic_pushups"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgBtnPushups"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/push_ups_desc" />
+
+                <TextView
+                    android:id="@+id/tvPushups"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:labelFor="@+id/imgBtnHighjump"
+                    android:text="@string/push_ups"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_text_fg"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBtnPushups"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgBtnPushups"
+                    app:layout_constraintVertical_bias="0.938" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:paddingTop="@dimen/grid_padding"
+            android:paddingStart="@dimen/grid_padding"
+            android:id="@+id/clRow4Col0"
+            android:paddingEnd="@dimen/grid_padding"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:padding="@dimen/activity_horizontal_margin"
+                android:backgroundTint="@color/watermelon"
+                android:background="@drawable/ripple"
+                android:src="@drawable/ic_custom_option"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgBtnCustomOption"
+                android:contentDescription="@string/custom_option_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCustomoption"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:labelFor="@+id/imgBtnCustomOption"
+                android:text="@string/custom_option_btn_text"
+                android:textAlignment="center"
+                android:textColor="@color/button_text_fg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imgBtnCustomOption"
+                app:layout_constraintTop_toTopOf="@+id/imgBtnCustomOption"
+                app:layout_constraintVertical_bias="0.938" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
